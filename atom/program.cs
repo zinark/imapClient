@@ -1,0 +1,2 @@
+// added stuff
+class EntranceOfApplication{ }
