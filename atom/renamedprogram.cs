@@ -1,0 +1,4 @@
+class anotherClass {
+}
+
+class secondClass {}
