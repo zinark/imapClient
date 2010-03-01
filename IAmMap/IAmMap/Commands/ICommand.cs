@@ -1,4 +1,4 @@
-using Atum.Imap.CommandGenerators;
+using IAmMap.CommandGenerators;
 using IAmMap.CommandParsers;
 using IAmMap.CommandResults;
 using IAmMap.Protocols;

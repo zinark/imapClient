@@ -1,6 +1,6 @@
 using IAmMap.Commands;
 
-namespace Atum.Imap.CommandGenerators
+namespace IAmMap.CommandGenerators
 {
     public class NullCommandGenerator<TCommand> : AbstractCommandGenerator<TCommand> where TCommand : ICommand
     {

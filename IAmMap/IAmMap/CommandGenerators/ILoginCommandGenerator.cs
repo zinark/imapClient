@@ -1,6 +1,6 @@
 using IAmMap.Commands;
 
-namespace Atum.Imap.CommandGenerators
+namespace IAmMap.CommandGenerators
 {
     public interface ILoginCommandGenerator : ICommandGenerator<ILoginCommand>
     {
