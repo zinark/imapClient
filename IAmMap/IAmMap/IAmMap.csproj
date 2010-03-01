@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3630E57D-E607-4D32-B5CC-28D1C5C55574}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAmMap</RootNamespace>
+    <AssemblyName>IAmMap</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractMailClient.cs" />
+    <Compile Include="CommandGenerators\AbstractCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\ICommandGenerator.cs" />
+    <Compile Include="CommandGenerators\IFetchCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\IListCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\ILoginCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\ILogoutCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\Implementation\FetchCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\Implementation\ListCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\Implementation\LoginCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\Implementation\LogoutCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\Implementation\SearchCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\Implementation\SelectCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\ISearchCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\ISelectCommandGenerator.cs" />
+    <Compile Include="CommandGenerators\NullCommandGenerator.cs" />
+    <Compile Include="CommandParsers\AbstractCommandParser.cs" />
+    <Compile Include="CommandParsers\ICommandParser.cs" />
+    <Compile Include="CommandParsers\IConnectCommandParser.cs" />
+    <Compile Include="CommandParsers\IFetchCommandParser.cs" />
+    <Compile Include="CommandParsers\IListCommandParser.cs" />
+    <Compile Include="CommandParsers\ILoginCommandParser.cs" />
+    <Compile Include="CommandParsers\ILogoutCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\ConnectCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\FetchCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\ListCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\LoginCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\LogoutCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\NullCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\SearchCommandParser.cs" />
+    <Compile Include="CommandParsers\Implementation\SelectCommandParser.cs" />
+    <Compile Include="CommandParsers\ISearchCommandParser.cs" />
+    <Compile Include="CommandParsers\ISelectCommandParser.cs" />
+    <Compile Include="CommandResults\ICommandResult.cs" />
+    <Compile Include="CommandResults\IConnectCommandResult.cs" />
+    <Compile Include="CommandResults\IFetchCommandResult.cs" />
+    <Compile Include="CommandResults\IListCommandResult.cs" />
+    <Compile Include="CommandResults\ILoginCommandResult.cs" />
+    <Compile Include="CommandResults\ILogoutCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\ConnectCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\FetchCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\ListCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\LoginCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\LogoutCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\NullCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\SearchCommandResult.cs" />
+    <Compile Include="CommandResults\Implementation\SelectCommandResult.cs" />
+    <Compile Include="CommandResults\INullCommandResult.cs" />
+    <Compile Include="CommandResults\ISearchCommandResult.cs" />
+    <Compile Include="CommandResults\ISelectCommandResult.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\IConnectCommand.cs" />
+    <Compile Include="Commands\IDisconnectCommand.cs" />
+    <Compile Include="Commands\IFetchCommand.cs" />
+    <Compile Include="Commands\IListCommand.cs" />
+    <Compile Include="Commands\ILoginCommand.cs" />
+    <Compile Include="Commands\ILogoutCommand.cs" />
+    <Compile Include="Commands\Implementation\AbstractCommand.cs" />
+    <Compile Include="Commands\Implementation\ConnectCommand.cs" />
+    <Compile Include="Commands\Implementation\DisconnectCommand.cs" />
+    <Compile Include="Commands\Implementation\FetchCommand.cs" />
+    <Compile Include="Commands\Implementation\ListCommand.cs" />
+    <Compile Include="Commands\Implementation\LoginCommand.cs" />
+    <Compile Include="Commands\Implementation\LogoutCommand.cs" />
+    <Compile Include="Commands\Implementation\SearchCommand.cs" />
+    <Compile Include="Commands\Implementation\SelectCommand.cs" />
+    <Compile Include="Commands\ISearchCommand.cs" />
+    <Compile Include="Commands\ISelectCommand.cs" />
+    <Compile Include="IMailClient.cs" />
+    <Compile Include="ImapClient.cs" />
+    <Compile Include="Models\Mail.cs" />
+    <Compile Include="Models\MailFolder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocols\AbstractProtocol.cs" />
+    <Compile Include="Protocols\Implementation\IMAPProtocol.cs" />
+    <Compile Include="Protocols\Implementation\IMAPProtocolWithSSL.cs" />
+    <Compile Include="Protocols\IProtocol.cs" />
+    <Compile Include="Protocols\ProtocolConnectionException.cs" />
+    <Compile Include="Protocols\StringDecoder.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
